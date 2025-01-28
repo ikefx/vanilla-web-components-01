@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="TodoItem.ts"></script>
+    <script defer src="ExpandableList.js"></script>
+    <title>To Do List: Native Web Components</title>
+  </head>
+  <style>
+    h3 {
+      color: red;
+    }
+  </style>
+  <body>
+    <h3>Other</h3>
+    <todo-item checked>
+      Todo 1
+      <span slot="description">Small Text</span>
+    </todo-item>
+    <todo-item>Todo 2</todo-item>
+    <todo-item>Todo 3</todo-item>
+    <ul is="expandable-list" data-expanded="true">
+      <li>First</li>
+      <li>Second</li>
+      <ul is="expandable-list" data-expanded="true">
+        <li>First</li>
+        <li>Second</li>
+      </ul>
+    </ul>
+  </body>
+</html>
